@@ -15,7 +15,7 @@ const eqArrays = function(arr1, arr2) {
 };
 
 // assertArraysEqual: print whether two arrays are identical
-const assertArraysEqual = function (arr1, arr2, expected) {
+const assertArraysEqual = function(arr1, arr2, expected) {
   const actual = eqArrays(arr1, arr2);
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
