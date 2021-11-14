@@ -15,7 +15,7 @@ const eqArrays = function(arr1, arr2) {
 };
 
 // assertArraysEqual: print whether two arrays are identical
-const assertArraysEqual = function (arr1, arr2, expected) {
+const assertArraysEqual = function(arr1, arr2, expected) {
   const actual = eqArrays(arr1, arr2);
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -25,7 +25,7 @@ const assertArraysEqual = function (arr1, arr2, expected) {
 };
 
 // without: return a subset of a given array, removing unwanted elements.
-const without = function (source, itemsToRemove) {
+const without = function(source, itemsToRemove) {
   // clone array
   // shallow copy of ONE - dimensional array only! (see https://www.freecodecamp.org/news/how-to-clone-an-array-in-javascript-1d3183468f6a/)
   const newArray = [...source];
