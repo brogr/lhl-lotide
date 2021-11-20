@@ -1,6 +1,3 @@
-// import
-const assertEqual = require("./assertEqual");
-
 // eqArrays: takes in two arrays and returns true or false, based on a perfect match.
 const eqArrays = function (arr1, arr2) {
   // compare length
