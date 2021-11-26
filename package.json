@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@brogr/lotide",
   "version": "1.0.0",
   "description": "LHL simplified clone of lodash",
   "main": "index.js",
