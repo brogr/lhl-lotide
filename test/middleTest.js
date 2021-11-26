@@ -1,18 +1,25 @@
 // import
-const assertArraysEqual = require("../assertArraysEqual");
+const assert = require("chai").assert;
 const middle = require("../middle");
 
-// TEST CODE
-// two
-console.log(middle([1, 2]));
-assertArraysEqual(middle([1, 2]), [], true);
-// odd
-console.log(middle([1, 2, 3, 4, 5]));
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3], true);
-console.log(middle(["1", "2", "3", "4", "5", "6", "7"]));
-assertArraysEqual(middle(["1", "2", "3", "4", "5", "6", "7"]), ["4"], true);
-// even
-console.log(middle([1, 2, 3, 4]));
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3], true);
-console.log(middle(["1", "2", "3", "4", "5", "6"]));
-assertArraysEqual(middle(["1", "2", "3", "4", "5", "6"]), ["3", "4"], true);
+// MOCHA TEST CODE
+describe("#middle", () => {
+  it("two: [] for [1, 2]", () => {
+    assert.deepEqual(middle([1, 2]), []);
+  });
+
+  it("odd: [3] for [1, 2, 3, 4, 5]", () => {
+    assert.deepEqual(middle([1, 2, 3, 4, 5]), [3]);
+  });
+  it('odd: ["4"] for ["1", "2", "3", "4", "5", "6", "7"]', () => {
+    assert.deepEqual(middle(["1", "2", "3", "4", "5", "6", "7"]), ["4"]);
+  });
+
+  it("even: [2, 3] for [1, 2, 3, 4]", () => {
+    assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
+  });
+  it('even: ["3", "4"] for ["1", "2", "3", "4", "5", "6"]', () => {
+    assert.deepEqual(middle(["1", "2", "3", "4", "5", "6"]), ["3", "4"]);
+  });
+  
+});
